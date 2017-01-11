@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | 韩飞</title>
+  <title>韩飞</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,108 +191,89 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/01/11/mobile/"></a></h4>
-                            
-                            <p><time datetime="2017-01-11T05:02:45.834Z"><a href="/2017/01/11/mobile/">2017-01-11</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/01/11/XMLHttpRequest/"></a></h4>
-                            
-                            <p><time datetime="2017-01-11T05:02:45.808Z"><a href="/2017/01/11/XMLHttpRequest/">2017-01-11</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/01/10/my-js/"></a></h4>
-                            
-                            <p><time datetime="2017-01-10T06:53:08.914Z"><a href="/2017/01/10/my-js/">2017-01-10</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-fly/">韩飞-html5</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-fly/">2016-12-27</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-blog/">韩飞</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-blog/">2016-12-27</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-01-11T05:02:45.808Z" itemprop="datePublished">
+          2017-01-11
+      </time>
+    
+</span>
+                <h1></h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<ol>
+<li><p>创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var xhr = new XMLHttpRequest();</div></pre></td></tr></table></figure>
+</li>
+<li><p>连接和发送</p>
+<ul>
+<li><p><code>open()</code> 传入三个参数：请求方式 (<code>get | post</code>)、请求地址、是否异步请求</p>
+</li>
+<li><p><code>GET</code> 请求方式通过url将参数传递到服务器，<code>POST</code> 则是通过将数据作为 <code>send</code> 的参数传递到服务器</p>
+<ul>
+<li>ps：<code>POST</code> 请求时，在发送数据之前，要设置表单提交的内容类型</li>
+<li>提交到服务器的数据先用 <code>encodeURIComponent()</code> 进行编码，防止特殊字符<br><code>decodeURIComponent()</code> 解码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>接收</p>
+<ul>
+<li><p>接收到响应后，响应的数据会自动填充 XHR 对象</p>
+<ul>
+<li><code>responseText</code> 响应返回的主体内容，字符串类型</li>
+<li><code>responseXML</code> 响应主体为 <code>&quot;text/xml&quot; or &quot;application/xml&quot;</code>时，保存的数据为 xml 数据，为 XML 对应的 <code>document</code> 类型</li>
+<li><code>status</code> 响应的 HTTP 状态码</li>
+<li><code>statusText</code> HTTP状态码的说明</li>
+</ul>
+</li>
+<li><p>XHR 对象的 <code>readyState</code> 属性表示请求/响应过程的当前活动阶段，</p>
+<ul>
+<li><code>0</code> 未初始化时，还没有开始调用 <code>open()</code> 方法</li>
+<li><code>1</code> 启动，调用了 <code>open()</code> 方法，未调用 <code>send()</code>方法</li>
+<li><code>3</code> 接收，已经接收到部分响应数据</li>
+<li><code>4</code> 完成，已经接收到全部响应数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p><code>readystatechange</code> 事件</p>
+<p>readyState 发生变化时触发</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">先判断响应是否完成</div><div class="line">然后判断服务器是否成功处理请求</div><div class="line">`xhr.status` 是状态码   </div><div class="line">状态码以 2 开头的都是代表成功</div><div class="line">304 表示从缓存中获取，可以在请求中加入随机数，避免从缓存中获取</div><div class="line">400 Bad Request 客户端语法错误，可能情况：传递的参数格式有误、请求头</div><div class="line">403 服务器拒绝执行，可能情况： 身份验证失败，或者参数不符合要求</div><div class="line">404 请求路径不存在</div><div class="line">405 请求方式不符合该请求方法的标准</div><div class="line">408 请求超时，未在服务器等待时间内完成本次请求的发送</div><div class="line">500 服务器遇到了一个未曾预料的状况，常是后台代码出错</div><div class="line">503 服务器维护或过载，暂时无法处理请求</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。加油！</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2017/01/11/mobile/" style="float: left;">
+        ← 
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/01/10/my-js/">
+         →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
