@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>韩飞 | 韩飞</title>
+  <title>韩飞</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,40 +197,105 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-12-27T11:51:54.000Z" itemprop="datePublished">
-          2016-12-27
+      <time datetime="2017-01-14T01:20:13.034Z" itemprop="datePublished">
+          2017-01-14
       </time>
     
 </span>
-                <h1>韩飞</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>我的名字叫韩强强也叫韩飞，家庭不怎么优越，于是就努力学习，成为一名码农，平时喜欢打网球、羽毛球、旅游、敲代码、看论坛。<br>平凡的我喜欢突破自己，每一次的困惑都会使我成长，我是韩飞，我想飞的更高。</p>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><p>和少数的不幸者一样，我小的时候就经历过生死，努力生存，靠着打工来求生活，就是这样的我，对生命越发的珍惜，安定，执着</p>
+      		<hr>
+<h2 id="react-js开发环境"><a href="#react-js开发环境" class="headerlink" title="react-js开发环境"></a>react-js开发环境</h2><ul>
+<li>开始项目<pre>
+npm init
+</pre>
+
+</li>
+</ul>
+<p>*安装webpack</p>
+<p><pre><br>npm install webpack –save-dev<br></pre></p>
 <ul>
-<li>博客之翼<blockquote>
-<p>以前帮助过我的人说，要把这份爱心传递下去，不要和别人学冷漠，即使这个世界上的人在寻找生活中迷失，变得残忍，变得自私自利，<br>但她希望我不要这样，人生存在这世界上的意义无非为了寻找情感，找到或多或少的温暖而生活在那个情感世界里，然后在发光发热，而我<br>只是没有找到，然而，就算是现在的我还没有找到，但是我答应了她，我就应该遵守，我也愿意遵守<br>我相信人不会越活越累，再大的艰难都会走出来</p>
-<h1>生活要勇敢的活</h1>
+<li>项目目录<ol>
+<li>/app<ol>
+<li>main.js</li>
+<li>component.js</li>
+</ol>
+</li>
+<li>/build<ol>
+<li>bundle.js</li>
+<li>index.html</li>
+</ol>
+</li>
+<li>webpack.config.js</li>
+<li>package.json</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>设置webpack.config.js<pre>
+var path=require('path');
+module.exports={
+entry:path.resolve(__dirname,'app/main.js'),
+output:{path:path.resolve(__dirname,'build'),
+filename:'bundle..js'}};
+</pre></li>
+<li>在package.json里面预设这个命令去启动打包功能<pre>
+'build':'webpack'
+</pre></li>
+<li>使用webpack-dev-server:时时监听<pre>
+npm install webpack-dev-server --save-dev
+</pre></li>
+<li>在package.json里面配置webpack-dev-server<pre>
+'dev':'webpack-dev-server --devtool eval --progress --colors --hot --content-base build'
+注释: 1、webpack-dev-server 创建服务器端口
+    2、devtool eval 创建源地址，使代码可以快速定位
+    3、progress 显示进度条
+    4、colors 使命令行带颜色
+    5、content-base build 指向设置的输出目录
+    <p>时时监听 </p>
+</pre></li>
+<li>启动自动刷新<br><pre><br>entry:[‘webpack/hot/dev-server’,’webpack-dev-server/client?<a href="http://lacalhost:4040" target="_blank" rel="external">http://lacalhost:4040</a>‘,<br>path.resolve(__dirname.’app/main.js’)]<br><p>配置在webpack.config.js的入口</p><br></pre><h3 id="这才是重点-配置react-babel"><a href="#这才是重点-配置react-babel" class="headerlink" title="这才是重点:配置react/babel"></a>这才是重点:配置react/babel</h3><ul>
+<li>安装react<blockquote>
+<p>npm install react –save</p>
 </blockquote>
 </li>
 </ul>
-<hr>
-<p>韩飞-fly</p>
-<hr>
+</li>
+</ul>
+<blockquote>
+<p>npm install ract-dom –save</p>
+<ul>
+<li>安装babel-loader<br>npm install babel-loader –save-dev</li>
+</ul>
+<p>npm install babel-core -save-dev</p>
+<ul>
+<li>安装支持ES5<br>npm install babel-preset-es2015 –save-dev </li>
+<li>安装支持JSX<br>npm install babel-preset-react –save-dev<ul>
+<li>安装支持最新ES版本<br>npm install babel-preset-stage-0 –save-dev</li>
+<li>安装Polyfilla<br>npm install babel-polyfill –save</li>
+<li>减少重复代码<br>npm install babel-runtime –save</li>
+</ul>
+</li>
+</ul>
+<p>npm install babel-plugin-transform-runtime –save-dev</p>
+<ul>
+<li><h4 id="配置babel"><a href="#配置babel" class="headerlink" title="配置babel"></a>配置babel</h4>在入口添加polyfill<br><pre><br>entry[<br>‘babel-polyfill’,’webpack/hot/dev-server’,<br>‘webpack-dev-server/client?<a href="http://localhost:1010" target="_blank" rel="external">http://localhost:1010</a>‘,<br>path,resolve(<strong>dirname,’app/main.js’)]<br><span>增加组</span><br>module:{loaders:[{‘loader’:’babel-loader’,exclude:[<br>path.resolve(</strong>dirname.’node_modules’)],include:[<br>path.resolve(__dirname.’app’)],test:/.jsx?$/,query:{<br>plugins:[‘transform-runtime’],presets:[<br>‘es2015’,’stage-0’,’react’]<br>}<br>}]<br>}<br></pre><ul>
+<li>发布配置(单文件入口)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/01/10/my-js/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/2016/12/27/new-fly/">
-        韩飞-html5 →
+    <a class="pull-right" href="/2017/01/12/fly-index/">
+         →
     </a>
     
 </nav>
