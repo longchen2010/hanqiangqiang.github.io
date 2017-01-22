@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/12 | 韩飞</title>
+  <title>react-js开发环境 | 韩飞</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,87 +191,122 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-fly/">韩飞-html5</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-fly/">2016-12-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/mobile/">html 媒体查询</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/mobile/">2016-12-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-blog/">韩飞</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-blog/">2016-12-27</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-27T11:51:54.000Z" itemprop="datePublished">
+          2016-03-27
+      </time>
+    
+</span>
+                <h1>react-js开发环境</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<ul>
+<li>开始项目<pre>
+npm init
+</pre>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。加油！</p>
+</li>
+</ul>
+<p>*安装webpack</p>
+<p><pre><br>npm install webpack –save-dev<br></pre></p>
+<ul>
+<li>项目目录<ol>
+<li>/app<ol>
+<li>main.js</li>
+<li>component.js</li>
+</ol>
+</li>
+<li>/build<ol>
+<li>bundle.js</li>
+<li>index.html</li>
+</ol>
+</li>
+<li>webpack.config.js</li>
+<li>package.json</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>设置webpack.config.js<pre>
+var path=require('path');
+module.exports={
+entry:path.resolve(__dirname,'app/main.js'),
+output:{path:path.resolve(__dirname,'build'),
+filename:'bundle..js'}};
+</pre></li>
+<li>在package.json里面预设这个命令去启动打包功能<pre>
+'build':'webpack'
+</pre></li>
+<li>使用webpack-dev-server:时时监听<pre>
+npm install webpack-dev-server --save-dev
+</pre></li>
+<li>在package.json里面配置webpack-dev-server<pre>
+'dev':'webpack-dev-server --devtool eval --progress --colors --hot --content-base build'
+注释: 1、webpack-dev-server 创建服务器端口
+    2、devtool eval 创建源地址，使代码可以快速定位
+    3、progress 显示进度条
+    4、colors 使命令行带颜色
+    5、content-base build 指向设置的输出目录
+    <p>时时监听 </p>
+</pre></li>
+<li>启动自动刷新<br><pre><br>entry:[‘webpack/hot/dev-server’,’webpack-dev-server/client?<a href="http://lacalhost:4040" target="_blank" rel="external">http://lacalhost:4040</a>‘,<br>path.resolve(__dirname.’app/main.js’)]<br><p>配置在webpack.config.js的入口</p><br></pre><h3 id="这才是重点-配置react-babel"><a href="#这才是重点-配置react-babel" class="headerlink" title="这才是重点:配置react/babel"></a>这才是重点:配置react/babel</h3><ul>
+<li>安装react<blockquote>
+<p>npm install react –save</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>npm install ract-dom –save</p>
+<ul>
+<li>安装babel-loader<br>npm install babel-loader –save-dev</li>
+</ul>
+<p>npm install babel-core -save-dev</p>
+<ul>
+<li>安装支持ES5<br>npm install babel-preset-es2015 –save-dev </li>
+<li>安装支持JSX<br>npm install babel-preset-react –save-dev<ul>
+<li>安装支持最新ES版本<br>npm install babel-preset-stage-0 –save-dev</li>
+<li>安装Polyfilla<br>npm install babel-polyfill –save</li>
+<li>减少重复代码<br>npm install babel-runtime –save</li>
+</ul>
+</li>
+</ul>
+<p>npm install babel-plugin-transform-runtime –save-dev</p>
+<ul>
+<li><h4 id="配置babel"><a href="#配置babel" class="headerlink" title="配置babel"></a>配置babel</h4>在入口添加polyfill<br><pre><br>entry[<br>‘babel-polyfill’,’webpack/hot/dev-server’,<br>‘webpack-dev-server/client?<a href="http://localhost:1010" target="_blank" rel="external">http://localhost:1010</a>‘,<br>path,resolve(<strong>dirname,’app/main.js’)]<br><span>增加组</span><br>module:{loaders:[{‘loader’:’babel-loader’,exclude:[<br>path.resolve(</strong>dirname.’node_modules’)],include:[<br>path.resolve(__dirname.’app’)],test:/.jsx?$/,query:{<br>plugins:[‘transform-runtime’],presets:[<br>‘es2015’,’stage-0’,’react’]<br>}<br>}]<br>}<br></pre><ul>
+<li>发布配置(单文件入口)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/06/27/XMLHttpRequest/" style="float: left;">
+        ← XMLHttpRequest
+    </a>
+    
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

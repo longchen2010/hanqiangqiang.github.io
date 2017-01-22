@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/12 | 韩飞</title>
+  <title>gruntfile.js | 韩飞</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,87 +191,51 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-fly/">韩飞-html5</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-fly/">2016-12-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/mobile/">html 媒体查询</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/mobile/">2016-12-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/27/new-blog/">韩飞</a></h4>
-                            
-                            <p><time datetime="2016-12-27T11:51:54.000Z"><a href="/2016/12/27/new-blog/">2016-12-27</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-27T11:51:54.000Z" itemprop="datePublished">
+          2016-07-27
+      </time>
+    
+</span>
+                <h1>gruntfile.js</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<ul>
+<li>module</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">module.exports=function(grunt)&#123;</div><div class="line">grunt.initConfig(&#123;</div><div class="line">gitclone:&#123;fontawesome:&#123;</div><div class="line">option:&#123;</div><div class="line">repository:&apos;https://github.com/FortAwesome/Font-Awesome.git&apos;,</div><div class="line">directory:&apos;tmp/fontawesome&apos;&#125;,&#125;,</div><div class="line">fancybox:&#123;</div><div class="line">options:&#123;</div><div class="line">repository:&apos;https://github.com/fancyapps/fancyBox.git&apos;,</div><div class="line">directory:&apos;tmp/fancybox&apos;&#125;&#125;</div><div class="line">&#125;,copy:&#123;fontawesome:&#123;</div><div class="line">expand:true,</div><div class="line">cwd:&apos;tmp/fantawesome/fonts/&apos;,</div><div class="line">src:[&apos;**&apos;],dest:&apos;source/css/fonts/&apos;&#125;,</div><div class="line">fancybox:&#123;expand:true,</div><div class="line">cwd:&apos;tmp/fancybox/sourse/&apos;,</div><div class="line">src:[&apos;**&apos;],dest:&apos;source/fancybox/&apos;&#125;&#125;,</div><div class="line">_clean:&#123;tmp:[&quot;tmp&quot;],</div><div class="line">fancyawesome:[&apos;source/css/fonts&apos;],</div><div class="line">fancybox:[&quot;source/fancybox&quot;]&#125;</div><div class="line">&#125;);</div><div class="line">require(&quot;load-grunt-tasks&quot;)(grunt);</div><div class="line">grunt.renameTask(&apos;clean&apos;,&apos;_clean&apos;);</div><div class="line">grunt.registerTask(&apos;fontawesome&apos;,[&apos;gitclone:fontawesome&apos;,&apos;copy:fontawesome&apos;,&apos;_clean:tmp&apos;]);</div><div class="line">gruntregisterTask(&apos;fancybox&apos;,[&apos;gitclone:fancybox&apos;,&apos;copy:fancybox&apos;,&apos;_clean:tmp&apos;]);</div><div class="line">grunt.registerTask(&apos;default&apos;,[&apos;gitclone&apos;,&apos;copy&apos;,&apos;_clean:tmp&apos;]);</div><div class="line">grunt.registerTask(&apos;clean&apos;,[&apos;clean&apos;]);&#125;</div></pre></td></tr></table></figure>
+<p><span><br>追求卓越，追求完美！best world！<br></span></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。加油！</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/12/27/new-blog/" style="float: left;">
+        ← 韩飞
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/07/27/my-js/">
+        do you know! →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
